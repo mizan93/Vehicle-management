@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2018 at 09:52 AM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 7.1.1
+-- Generation Time: Oct 18, 2020 at 05:13 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -37,7 +38,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `username`, `password`) VALUES
-(1, 'mihaf24', '1234');
+(1, 'admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -183,7 +184,7 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `email`, `username`, `password`, `admin`) VALUES
 (10, 'ibtihaj', 'ahmed', 'fahad@gmail.com', 'fahad', 'asdasd', 0),
 (13, 'dad', 'ahmed', 'fahaha@gmail.com', 'asdasd', 'asdasdad', 0),
-(14, 'rakibul', 'hoque', 'rakib@gmail.com', 'rakib24', '1234', 0);
+(14, 'Mr.', 'user', 'user@gmail.com', 'username', 'user', 0);
 
 -- --------------------------------------------------------
 
@@ -268,36 +269,44 @@ ALTER TABLE `vehicle`
 --
 ALTER TABLE `admin`
   MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `bill`
 --
 ALTER TABLE `bill`
   MODIFY `bill_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
 --
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
   MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+
 --
 -- AUTO_INCREMENT for table `driver`
 --
 ALTER TABLE `driver`
   MODIFY `driverid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
 --
 -- AUTO_INCREMENT for table `tripcost`
 --
 ALTER TABLE `tripcost`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
 --
 -- AUTO_INCREMENT for table `vehicle`
 --
 ALTER TABLE `vehicle`
   MODIFY `veh_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
