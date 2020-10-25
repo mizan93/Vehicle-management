@@ -13,5 +13,13 @@ user can see vehicl, driver, route, schedeule,his/her account and billing info.
 user can book a vehicle for rent.
 
  -----------------------------Screenshoot------------------------------------------
-<img src="photos/Capture.PNG"/>
-<img src="photos/Capture2.PNG"/>
+<img src="screenshots/admin.png"/>
+<img src="screenshots/home.png"/>
+<img src="screenshots/driver list.png"/>
+<img src="screenshots/list.png"/>
+<img src="screenshots/login.png"/>
+<img src="screenshots/booking.png"/>
+<img src="screenshots/corresponding bill.png"/>
+<img src="screenshots/route.png"/>
+<img src="screenshots/schedeule.png"/>
+<img src="screenshots/vahicle lis.png"/>
