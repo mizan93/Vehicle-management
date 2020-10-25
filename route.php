@@ -62,8 +62,7 @@
       </div> 
        <div class="col-md-3"></div>
        <div class="col-md-6">
-           <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d932412.1267521078!2d88.9639724042315!3d24.093234513307983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x39fbefd0a55ea957%3A0x2f9cac3357d62617!2sRajshahi+University+of+Engineering+%26+Technology%2C+6204%2C%2C+Rajshahi+-+Dhaka+Hwy%2C+Rajshahi!3m2!1d24.363568299999997!2d88.6283773!4m5!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!3m2!1d23.810332!2d90.4125181!5e0!3m2!1sen!2sbd!4v1522267261303" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-       </div> 
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29214.343973021074!2d90.37418053935893!3d23.75476009348305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b95b0ad0e47b%3A0xe9d00c3003938a63!2sNorthern%20College%20Bangladesh%20permanent!5e0!3m2!1sen!2sbd!4v1603633533567!5m2!1sen!2sbd" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>       </div> 
        <div class="col-md-3"></div> 
         
     </div> 

@@ -75,23 +75,13 @@
      
      
      
-    <!--
-    <div>  
-       <div class="jumbotron">
-          <h2 class="animated bounce">Ruet Vehicle Management</h2>      
-          <p>A management system where you can easily manage vehicles.</p>
-        </div>
-           
-       
-        
-    </div> 
-    -->
+   
     <div class="parallax foo">
        <?php include 'navbar.php';?>
     
         <div class="hero-text" style="font-size:50px text-align: center; position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);color: white;">
            
-            <h1 class="animated rubberBand" >Ruet Vehicle Management System</h1>
+            <h1 class="animated rubberBand" >NCB Vehicle Management System</h1>
             <p>A management system where you can easily manage vehicles</p>
             
             <?php if(isset($_SESSION['username'])==true) { ?>
@@ -112,12 +102,12 @@
           </div> 
           <div class="row">
               <div class="col-md-6 foo">
-                <p><b>The ruet bus goes around the rajshahi city in different interval. this is the route of the ruet bus.</b></p>
+                <p><b>The NCB  bus goes around the Dhaka city in different interval. this is the route of the NCB bus.</b></p>
                 <img src="pexels-photo-136739.jpeg" class="img-responsive" >  
               </div>
               <div class="col-md-6">
                   <br>
-                   <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d932412.1267521078!2d88.9639724042315!3d24.093234513307983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x39fbefd0a55ea957%3A0x2f9cac3357d62617!2sRajshahi+University+of+Engineering+%26+Technology%2C+6204%2C%2C+Rajshahi+-+Dhaka+Hwy%2C+Rajshahi!3m2!1d24.363568299999997!2d88.6283773!4m5!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!3m2!1d23.810332!2d90.4125181!5e0!3m2!1sen!2sbd!4v1522267261303" width="500" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29214.343973021074!2d90.37418053935893!3d23.75476009348305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b95b0ad0e47b%3A0xe9d00c3003938a63!2sNorthern%20College%20Bangladesh%20permanent!5e0!3m2!1sen!2sbd!4v1603633533567!5m2!1sen!2sbd" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                    <p>The Bus Route</p>
               </div>
           </div>       
@@ -132,7 +122,7 @@
           
           <div class="row">
               <div class="col-md-12">
-                  <p style="font-size: 20px;">The driver of ruet are very punctual and they provides great service. Every one of them is professional and great at their jobs</p>
+                  <p style="font-size: 20px;">The driver of NCB are very punctual and they provides great service. Every one of them is professional and great at their jobs</p>
                   
               </div>
           </div>
@@ -150,7 +140,7 @@
                 <img src="pexels-photo-385998.jpeg" class="img-responsive" >  
               </div>
               <div class="col-md-6 foo1">
-                  <p style="font-size:20px;"><b>In Ruet we have around ten buses and each one of it is well maintained. These buses goes in different direction of the city and can also be hired.</b></p>
+                  <p style="font-size:20px;"><b>In NCB we have around ten buses and each one of it is well maintained. These buses goes in different direction of the city and can also be hired.</b></p>
               </div>
               
           </div>       
@@ -165,7 +155,7 @@
         <footer style="background-color: #2f2f2f;
           color: #fff; padding-top: 70px;
           padding-bottom: 70px;" class="container-fluid text-center">
-                <p>All rights reserved by IAF</p> 
+                <p>All rights reserved by NCB</p> 
         </footer>
         
         
