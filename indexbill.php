@@ -1,5 +1,5 @@
 <?php
-   $conn=mysqli_connect('localhost','root','','vehicle management');
+   $conn=mysqli_connect('localhost','root','','transport_management');
    $sql="SELECT * FROM bill ";
    $result=mysqli_query($conn,$sql);
     if(!isset($_SESSION)) 
@@ -14,7 +14,7 @@
 <html lang="en">   
 <head>   
 <meta charset="utf-8">   
-<title>Welcome to Vehicle Management</title>   
+<title>Welcome to Transport management system</title>   
 <meta name="description" content="Bootstrap.">  
 <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">   
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

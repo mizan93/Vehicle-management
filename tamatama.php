@@ -1,5 +1,5 @@
  <?php
-         $to      = "fahimbd24@gmail.com"; // Send email to our user
+         $to      = "mizan@gmail.com"; // Send email to our user
                        $subject = 'Signup | Verification'; // Give the email a subject 
                         $message = '
 

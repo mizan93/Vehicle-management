@@ -1,6 +1,6 @@
 <?php
     session_start();
-     $connection= mysqli_connect('localhost','root','','vehicle management');
+     $connection= mysqli_connect('localhost','root','',' transport_management');
 
     $select_query="SELECT * FROM `tripcost`";
     $result= mysqli_query($connection,$select_query);

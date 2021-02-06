@@ -1,5 +1,5 @@
 <?php
-   $conn=mysqli_connect('localhost','root','','vehicle management');
+   $conn=mysqli_connect('localhost','root','','transport_management');
    $sql="SELECT * FROM bill ";
    $result=mysqli_query($conn,$sql);
 ?>

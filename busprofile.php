@@ -1,5 +1,5 @@
 <?php
-    $connection= mysqli_connect("localhost","root","","vehicle management");
+    $connection= mysqli_connect("localhost","root","","transport_management");
     
     session_start();
 
@@ -18,7 +18,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>vehicle management system</title>
+    <title>Transport management system</title>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 

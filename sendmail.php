@@ -1,6 +1,6 @@
 <?php
     
-    $connection= mysqli_connect("localhost","root","","vehicle management");
+    $connection= mysqli_connect("localhost","root","","transport_management");
     session_start();
     
     $id= $_GET['id'];
@@ -76,7 +76,7 @@ if(isset($_POST['email'])) {
  
    
  
-    $email_message = " This is an email form RUET Vehicle Management to confirm your vehicle. Details are given below.\n\n";
+    $email_message = " This is an email form NCB  to confirm your vehicle. Details are given below.\n\n";
  
      
  

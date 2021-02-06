@@ -31,7 +31,7 @@
            </div>
            <div class="col-md-2"></div>
            <div class="col-md-8">
-               <p>You can control your website from here.</p>
+               <p>You can control system from here.</p>
            </div>
            <div class="col-md-2"></div>
        </div>

@@ -9,7 +9,7 @@
 
     
 
-    $connection=mysqli_connect("localhost","root","","vehicle management");
+    $connection=mysqli_connect("localhost","root","","transport_management");
 
     if(isset($_POST['drname1']))
     {
