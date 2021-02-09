@@ -1,14 +1,13 @@
-<?php 
-    if(!isset($_SESSION)) 
-    { 
-        session_start(); 
-    } 
+<?php
+    if (!isset($_SESSION)) {
+        session_start();
+    }
     
 
-    $connection= mysqli_connect('localhost','root','','transport_management');
+    $connection= mysqli_connect('localhost', 'root', '', 'transport_management');
     $msg= "" ;
     
-    if(isset($_POST['submit'])){
+    if (isset($_POST['submit'])) {
         $regno= $_POST['vehregno'];
         $type= $_POST['type'];
         $chesisno= $_POST['vehchesis'];
@@ -20,28 +19,23 @@
         
         //image Upload
     
-        move_uploaded_file($_FILES['file']['tmp_name'],"vehicle picture/".$_FILES['file']['name']); 
+        move_uploaded_file($_FILES['file']['tmp_name'], "vehicle picture/".$_FILES['file']['name']);
         
         
-        //move_uploaded_file($_FILES['file']['tmp_name'],"picture/".$_FILES['file']['name']); 
+        //move_uploaded_file($_FILES['file']['tmp_name'],"picture/".$_FILES['file']['name']);
         $res=false;
         $insert_query="INSERT INTO `vehicle`(`veh_id`, `veh_reg`, `veh_type`, `chesisno`, `brand`, `veh_color`, `veh_regdate`, `veh_description`, `veh_photo`) VALUES ('','$regno','$type','$chesisno','$brand','$color','$regdate','$description','$photo')";
         
-        $res= mysqli_query($connection,$insert_query);
+        $res= mysqli_query($connection, $insert_query);
             
-        if($res==true){
-            $msg= "<script language='javascript'>
-                                       swal(
-                                            'Success!',
-                                            'Registration Completed!',
-                                            'success'
-                                            );
-				          </script>";
+        if ($res==true) {
+            $msg='item added.';
+            
+            header('Location:vehicleList.php?msg='.$msg);
         }
-        
     }
     
-    //$msg="";
+    // $msg="";
 
     
         
@@ -52,7 +46,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>New Driver</title> 
+    <title>Add vehicle</title> 
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
@@ -77,7 +71,7 @@
        
         <div class="page-header">
             <h1 style="text-align: center;">New Vehicle Form </h1>
-            <?php echo $msg; ?>
+           
       </div> 
        <div class="col-md-3">
         
