@@ -4,17 +4,13 @@
         session_start(); 
     } 
     $connection= mysqli_connect('localhost','root','','transport_management');
-
-
     $username= $_SESSION['username'];
-    //echo $username;
     
     $query= "SELECT  `first_name`, `last_name`, `email` FROM `user` WHERE username='$username'";
     $result= mysqli_query($connection,$query);
     
     $row= mysqli_fetch_assoc($result);
-    //$name= $row['first_name']." ". $row['last_name'];
-   // echo $name;
+    
 ?>
 
 <!DOCTYPE html>
@@ -52,8 +48,18 @@
         <div class="row">
             <div class="page-header">
                 <h1 style="text-align:center;">Booking</h1>
-                 <?php //echo $msg; ?>
+                
             </div>
+            <?php
+        if (isset($_GET['msg'])) {?>
+       <div class="alert alert-danger alert-dismissable"  style="width: 300px; margin:0 auto;">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                    <?php echo $_GET['msg'];?>
+                  </div>
+<?php
+        }
+?>
+<br>
             <div class="col-md-3"></div>
             <div class="col-md-6">
                 <form class="animated bounce" action="bookingaction.php" method="post">

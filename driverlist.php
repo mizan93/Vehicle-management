@@ -11,7 +11,6 @@
 <head>
     <meta charset="UTF-8">
     <title>List of Drivers</title>
-    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
@@ -21,11 +20,8 @@
     <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="style.css">
 </head> 
-
-<body > 
-  
+<body >
    <div  id="myDiv">
-  
    <?php include 'navbar.php'; ?>
    <br><br><br>
    <div class="container">
@@ -63,16 +59,10 @@
        
    </div>
     </div> 
-    
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-    
 <script>
         window.sr = ScrollReveal();
         sr.reveal('.foo', { duration: 800 });
-     
     </script>
-     
-
-    
 </body>
 </html>

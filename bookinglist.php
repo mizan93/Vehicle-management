@@ -88,16 +88,11 @@
                         <?php } else { ?>
                         <td>Yes</td>
                         <?php }  ?>
-                        
-                        
-                        
                         <?php if($row['finished']=='1' and $row['paid']==0 ){  ?>
                         <td><a class="btn btn-primary" href="bill.php?id=<?php echo $row['booking_id']; ?>">Bill</a></td> 
                          <?php } else if($row['paid']==1 ) { ?>
                           <td><a class="btn btn-primary disabled" href="bill.php?id=<?php echo $row['booking_id']; ?>">Bill</a></td> 
                           <?php }  ?>
-                          
-                         
                           <td><a href="confirmpayment.php?id=<?php echo $row['booking_id']; ?>">Confirm</a></td>
                           
                           <?php if($row['paid']=='0'){ ?>
@@ -105,13 +100,7 @@
                         <?php } else { ?>
                         <td>Yes</td>
                         <?php }  ?>
-                          
-                          
-                          
-                        
                     </tr>
-                    
-
                     <?php }   ?>
                 </tbody>
             </table>

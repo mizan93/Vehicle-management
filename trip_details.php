@@ -1,14 +1,10 @@
 <?php
     session_start();
-     $connection= mysqli_connect('localhost','root','',' transport_management');
-
-    $select_query="SELECT * FROM `tripcost`";
-    $result= mysqli_query($connection,$select_query);
+     $connection= mysqli_connect('localhost', 'root', '', 'transport_management');
+    $select_query="SELECT * FROM tripcost";
+    $result= mysqli_query($connection, $select_query);
 
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,21 +36,27 @@
                 <table id="myTable" class="table table-bordered animated rubberBand">
                     <thead>
                         <th>Booking Id</th>
+                        <th>User Name</th>
                         <th>Total Km</th>
                         <th>Oil Cost</th>
                         <th>Extra Cost</th>
                         <th>Total Cost Cost</th>
                     </thead>
                     <tbody>
-                        <?php while($row=mysqli_fetch_assoc($result)){ ?>
+                        <?php
+                       
+                            while ($row=mysqli_fetch_assoc($result)) { ?>
                         <tr>
                             <td><?php echo $row['booking_id']; ?></td>
+                            <td><?php echo $row['username']; ?></td>
+
                             <td><?php echo $row['total_km']; ?></td>
                             <td><?php echo $row['oil_cost']; ?></td>
                             <td><?php echo $row['extra_cost']; ?></td>
                             <td><?php echo $row['total_cost']; ?></td>
                         </tr>
-                        <?php } ?>
+                        <?php  }
+                         ?>
                     </tbody>
                 </table>
                 

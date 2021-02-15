@@ -3,12 +3,8 @@
     { 
         session_start(); 
     } 
-   
-
     $connection= mysqli_connect('localhost','root','','transport_management');
-    $msg= "" ;     
-
-
+    $msg= "" ;    
     if(isset($_POST['submit'])){
         $drname=$_POST['drname'];
         $drjoin=$_POST['drjoin'];
@@ -25,33 +21,21 @@
        move_uploaded_file($_FILES['file']['tmp_name'],"picture/".$_FILES['file']['name']); 
         
         $res=false;
-        $insert_query="INSERT INTO `driver`(`driverid`, `drname`, `drjoin`, `drmobile`, `drnid`, `drlicense`, `drlicensevalid`, `draddress`, `drphoto`) VALUES ('','$drname','$drjoin','$drmobile','$drnid','$drlicense','$drlicensevalid','$draddress','$drphoto')";
+        $insert_query="INSERT INTO `driver`(`driverid`, `drname`, `drjoin`, `drmobile`, `drnid`, `drlicense`, `drlicensevalid`, `draddress`, `drphoto`) 
+        VALUES ('','$drname','$drjoin','$drmobile','$drnid','$drlicense','$drlicensevalid','$draddress','$drphoto')";
         
         $res= mysqli_query($connection,$insert_query);
             
         if($res==true){
-            $msg= "<script language='javascript'>
-                                       swal(
-                                            'Success!',
-                                            'Registration Completed!',
-                                            'success'
-                                            );
-				          </script>";
+            $msg= "Driver added successfully.";
+         
+            header('Location:DriverIndex.php?msg='.$msg);
         }
         else{
             die('unsuccessful' .mysqli_error($connection));
         }
-        
-        
     }
-
-    
-        
-       
-    
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,48 +57,42 @@
 <body>  
  <?php include 'navbar_admin.php'; ?>
  <br>
-  
-  
+
    <div class="container"> 
      <div class="row">
        
         <div class="page-header">
             <h1 style="text-align: center;">New Driver Form</h1>
+            <a class="btn btn-primary float-right" href="DriverIndex.php" role="button">Driver List</a>
+
             <?php echo $msg; ?>
-                              
-                  
-      
+               
       </div> 
        <div class="col-md-3">
          
        </div>
         <div class="col-md-6 animated bounceIn"> 
           
-           
-            
                 <br>
             <form class="form-horizontal" action="" method="post" enctype="multipart/form-data" >
                 
                 <div class="input-group">
                   <span class="input-group-addon"><b>Driver Name</b></span>
-                  <input id="drname" type="text" class="form-control" name="drname" placeholder="Name">
+                  <input id="drname" type="text" class="form-control" name="drname" placeholder="Name" required>
                 </div>
                 <br> 
                 
                  <div class="input-group">
                   <span class="input-group-addon"><b>Mobile</b></span>
-                  <input id="drmobile" type="text" class="form-control" name="drmobile" placeholder="Mobile No">
+                  <input id="drmobile" type="number" class="form-control" name="drmobile" placeholder="Mobile No" required>
                 </div>
                 <br> 
                 
                 <div class="input-group">
                   <span class="input-group-addon"><b>Driver Joining Date</b></span>
-                  <input id="drjoin" type="text" class="form-control" name="drjoin" placeholder="Joining date">
+                  <input id="drjoin" type="text" class="form-control" name="drjoin" placeholder="Joining date" required>
                 </div>
                 <br>
-                
-              
-                
                  <script>
                       $( function() {
                         $( "#drjoin" ).datepicker();
@@ -123,36 +101,30 @@
                 
                  <div class="input-group">
                   <span class="input-group-addon"><b>National ID</b></span>
-                  <input id="drnid" type="text" class="form-control" name="drnid" placeholder="Nid No">
+                  <input id="drnid" type="number" class="form-control" name="drnid" placeholder="Nid No" required>
                 </div>
                 <br> 
                 
                 <div class="input-group">
                   <span class="input-group-addon"><b>License No</b></span>
-                  <input id="drlicense" type="text" class="form-control" name="drlicense" placeholder="License No">
+                  <input id="drlicense" type="text" class="form-control" name="drlicense" placeholder="License No" required>
                 </div>
                 <br>
                 
                  <div class="input-group">
                   <span class="input-group-addon"><b>License End Date</b></span>
-                  <input id="drlicensevalid" type="text" class="form-control" name="drlicensevalid" placeholder="Validity date">
+                  <input id="drlicensevalid" type="text" class="form-control" name="drlicensevalid" placeholder="Validity date" required>
                 </div>
                 <br>
-                
-              
-                
                  <script>
                       $( function() {
                         $( "#drlicensevalid" ).datepicker();
                       } );
                 </script> 
-                
-                
                 <br>
-                
                  <div class="input-group">
                   <span class="input-group-addon"><b>Driver Address</b></span>
-                     <textarea rows="5" id="draddress" type="text" class="form-control" name="draddress" placeholder="Address"> </textarea>
+                     <textarea rows="5" id="draddress" type="text" class="form-control" name="draddress" placeholder="Address" required> </textarea>
                   
                 </div>
                 <br>
@@ -160,12 +132,7 @@
                  <div class="input-group">
                   <span class="input-group-addon"><b>Photo</b></span>
                   <input  type="file" class="form-control" name="file"> 
-
               </div>
-                
-                
-                 
-                
                 <div class="input-group">
                   <input type="submit" name="submit" class="btn btn-success">
                   
@@ -175,11 +142,7 @@
         <div class="col-md-3"></div>
          
      </div>
-         
-   
     </div> 
-    
-   
     
 </body>
 </html>

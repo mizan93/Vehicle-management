@@ -20,22 +20,13 @@
         $username= $_POST['username'];
         
         $insert_query="INSERT INTO `booking`(`booking_id`, `name`,`username` , `department`, `type`, `req_date`, `req_time`, `ret_date`, `ret_time`, `destination`, `pickup_point`, `resons`, `email`, `mobile`, `confirmation`, `veh_reg`, `driverid`, `finished`) VALUES ('','$name','$username','$department','$type','$req_date','$req_time','$return_date','$return_time','$destination','$pickup','$reason','$email','$mobile','','','','')"; 
-        echo $name;
-        
-        
-        
+
         
         $res= mysqli_query($connection,$insert_query);
         
          if($res==true){
-            $msg= "<script language='javascript'>
-                                       swal(
-                                            'Success!',
-                                            'Registration Completed!',
-                                            'success'
-                                            );
-				          </script>";
-            
+            $msg= "Success! Booking Complete.";
+            header("Location:booking.php?msg=".$msg);
         }
         else{
             die('unsuccessful' .mysqli_error($connection));
@@ -49,11 +40,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    
-    
-    
-    
-    
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
     
    
