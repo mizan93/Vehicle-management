@@ -76,8 +76,7 @@
                             <td>
                                 <a class="btn btn-primary" href="vehicleView.php?busid=<?php echo $row["veh_id"]; ?>">View</a>
                                 <a class="btn btn-info" href="vehicleEdit.php?veh_id=<?php echo $row["veh_id"]; ?>">Edit</a>
-                                <a class="btn btn-danger" onclick="return confirm('Are you sure to delete?');" href="vehicleDelete.php?delId=<?php echo $row['veh_id']; ?>">Delete</a>
-                                
+                                <a class="btn btn-danger" onclick="return confirm('Are you sure to delete?');" href="vehicleDelete.php?delId=<?php echo $row['veh_id']; ?>">Delete</a>   
                             </td>
                         </tr>
                         <?php } }?>

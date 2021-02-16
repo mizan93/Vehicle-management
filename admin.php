@@ -1,9 +1,20 @@
 <?php
-    if(!isset($_SESSION)) 
-    {   
+    
         
-        session_start(); 
-    } 
+        // session_start();
+        $connection=mysqli_connect("localhost", "root", "", "transport_management");
+$sql="select * from driver";
+$dcount=mysqli_query($connection, $sql);
+$sql="select * from vehicle";
+$vcount=mysqli_query($connection, $sql);
+$sql="select * from tripcost";
+$tcount=mysqli_query($connection, $sql);
+$sql="select * from user";
+$ucount=mysqli_query($connection, $sql);
+$sql="select * from bill";
+$bcount=mysqli_query($connection, $sql);
+$sql="select * from booking";
+$bookingcount=mysqli_query($connection, $sql);
 
 ?>
 
@@ -28,10 +39,33 @@
            <div class="page-header">
                <h1 style="text-align: center">Admin Panel</h1>
            </div>
-           <div class="col-md-2"></div>
-           <div class="col-md-8">
-               <p>You can control system from here.</p>
-           </div>
+           <div class="col-md-12 animated bounceIn"> 
+        
+                  <table  id="myTable" class="table table-bordered animated bounce">
+                      <thead>
+                          <th> Total vehicle</th>
+                          <th> Total Driver</th>
+                          <th> Total Trip</th>
+                          <th> Total Booking</th>
+                          <th> Total Billing</th>
+                      </thead>  
+  
+                     
+                      <tbody>
+                          <tr>
+                             <td><?php echo mysqli_num_rows($vcount);  ?></td>
+                             <td><?php echo mysqli_num_rows($dcount);  ?></td>
+                             <td><?php echo mysqli_num_rows($tcount);  ?></td>
+                             <td><?php echo mysqli_num_rows($bookingcount);  ?></td>
+                             <td><?php echo mysqli_num_rows($bcount);  ?></td>
+                            
+                          </tr>
+                         
+                      </tbody> 
+                
+                  </table>
+          </div>  
+
            <div class="col-md-2"></div>
        </div>
    </div>
