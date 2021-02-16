@@ -12,7 +12,8 @@
                 <ul class="nav navbar-nav">
                     <!-- <li><a href="newdriver.php">Add New Driver</a></li> -->
                     <li><a href="DriverIndex.php">Driver</a></li>
-                    <li><a href="vehiclelist.php"> Vehicle</a></li>
+                    <li><a href="vehiclelist.php">Vehicle</a></li>
+                    <li><a href="scheduleList.php">Schedule</a></li>
                     <li><a href="indexbill.php">Billing</a></li>
                     <li><a href="bookinglist.php">Booking</a></li>
                     <li><a href="trip_details.php">Trip Details</a></li>

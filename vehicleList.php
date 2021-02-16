@@ -65,8 +65,9 @@
                         <th>Action</th>
                     </thead>  
 
-                    <?php while ($row=mysqli_fetch_assoc($res)) {  ?>
+                   
                     <tbody>
+                    <?php while ($row=mysqli_fetch_assoc($res)) {  ?>
                         <tr>
                             <td><img height="100px" width="100px" src="vehicle picture/<?php echo $row["veh_photo"]; ?>" alt="dp"></td>
 <td><?php echo $row["veh_reg"] ?></td>
@@ -79,8 +80,9 @@
                                 
                             </td>
                         </tr>
+                        <?php } }?>
                     </tbody> 
-                <?php } }?>
+              
                 </table>
         </div>  
         <div class="col-md-3"></div>

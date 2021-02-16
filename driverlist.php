@@ -41,15 +41,17 @@
                         <th>Driver Name</th>
                     </thead>  
 
-                    <?php while($row=mysqli_fetch_assoc($res)) {  ?>
                     <tbody>
+                    <?php while($row=mysqli_fetch_assoc($res)) {  ?>
+
                         <tr>
                             <td><img height="100px" width="100px" src="picture/<?php echo $row["drphoto"]; ?>" alt="dp"></td>
 
                             <td><a href="driverprofile.php?driverid=<?php echo $row["driverid"]; ?>"> <?php echo $row["drname"] ?></a></td>
                         </tr>
+                        <?php } }?>
+
                     </tbody> 
-                <?php } }?>
                 </table>
              </div>
              <div class="col-md-3"></div>
