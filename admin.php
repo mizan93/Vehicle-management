@@ -41,7 +41,7 @@ $bookingcount=mysqli_query($connection, $sql);
            </div>
            <div class="col-md-12 animated bounceIn"> 
         
-                  <table  id="myTable" class="table table-bordered animated bounce">
+                  <table  id="myTable" class="table  animated bounce">
                       <thead>
                           <th> Total vehicle</th>
                           <th> Total Driver</th>

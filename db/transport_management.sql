@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 18, 2020 at 05:13 AM
+-- Generation Time: Feb 16, 2021 at 06:57 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `vehicle management`
+-- Database: `transport_management`
 --
 
 -- --------------------------------------------------------
@@ -61,8 +61,6 @@ CREATE TABLE `bill` (
 --
 
 INSERT INTO `bill` (`bill_id`, `id`, `username`, `salary`, `equipment`, `oil`, `tcost`) VALUES
-(8, '25', '', 1000, 1000001, 1010, 101010101),
-(9, '25', '', 1000, 100, 300, 1400),
 (10, '25', '', 10000, 500, 4000, 10000);
 
 -- --------------------------------------------------------
@@ -98,13 +96,10 @@ CREATE TABLE `booking` (
 --
 
 INSERT INTO `booking` (`booking_id`, `name`, `username`, `department`, `type`, `req_date`, `req_time`, `ret_date`, `ret_time`, `destination`, `pickup_point`, `resons`, `email`, `mobile`, `confirmation`, `veh_reg`, `driverid`, `finished`, `paid`) VALUES
-(47, 'ibtihaj ahmed', 'fahad', 'CSE', 'car', '05/01/2018', '7 : 19 AM', '05/02/2018', '7 : 19 AM', 'Katakhali', 'Ruet Gate', 'Education', 'fahad@gmail.com', 19398134, 1, 'ga-259723', 20, 1, 1),
-(48, 'ibtihaj ahmed', 'fahad', 'CSE', 'car', '05/01/2018', '7 : 22 AM', '05/02/2018', '7 : 22 AM', 'dd', 'dd', 'dd', 'fahad@gmail.com', 19398134, 1, 'cho- 301294', 20, 1, 1),
-(49, 'ibtihaj ahmed', 'fahad', 'CSE', 'car', '05/24/2018', '7 : 32 AM', '05/25/2018', '7 : 32 AM', 'ra', 'as', 'Trip', 'fahad@gmail.com', 2147483647, 1, 'cho- 301294', 21, 1, 1),
-(50, 'ibtihaj ahmed', 'fahad', 'cse', 'car', '07/09/2018', '8 : 55 PM', '07/10/2018', '8 : 55 PM', 'kajla', 'kajla', 'emni', 'fahad@gmail.com', 2147483647, 1, 'ga-259723', 20, 1, 1),
-(51, 'ibtihaj ahmed', 'fahad', 'dd', 'car', '07/09/2018', '9 : 05 PM', '07/09/2018', '9 : 05 PM', 'dd', 'dd', 'dd', 'fahad@gmail.com', 0, 1, 'cho- 301294', 21, 1, 1),
-(52, 'ibtihaj ahmed', 'fahad', 'dd', 'car', '07/02/2018', '9 : 06 PM', '07/02/2018', '9 : 06 PM', 'dd', 'dd', 'sd', 'fahad@gmail.com', 0, 1, 'cho- 301294', 21, 1, 1),
-(53, 'ibtihaj ahmed', 'fahad', 'cse', 'bus', '07/09/2018', '9 : 11 PM', '07/08/2018', '9 : 11 PM', 'ddd', 'ddd', 'dd', 'fahad@gmail.com', 1738718731, 1, 'ga-259723', 20, 0, 0);
+(54, 'md mizanur', 'mizan96', 'fdfd', 'car', '02/03/2021', '10 : 09 PM', '02/02/2021', '10 : 09 PM', 'fdfdfd', 'dfdfdfd', 'fdfdfdf', 'mizan@gmail.com', 0, 1, 'fdfdf', 21, 0, 1),
+(56, 'Mr. user', 'username', 'cse', 'car', '02/10/2021', '7 : 41 PM', '02/09/2021', '7 : 41 PM', 'Mirpur 12', 'Dhanmondi', 'toure', 'user@gmail.com', 1795221226, 0, '', 0, 0, 1),
+(57, 'Mr. user', 'username', 'fdfdf', 'car', '02/17/2021', '7 : 46 PM', '02/11/2021', '7 : 46 PM', 'Mirpur 12', 'Dhanmondi', 'fdfdf', 'user@gmail.com', 1795221226, 0, '', 0, 0, 1),
+(58, 'Mr. user', 'username', 'fdfdf', 'car', '02/17/2021', '7 : 46 PM', '02/11/2021', '7 : 46 PM', 'Mirpur 12', 'Dhanmondi', 'fdfdf', 'user@gmail.com', 1795221226, 0, '', 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -130,8 +125,35 @@ CREATE TABLE `driver` (
 --
 
 INSERT INTO `driver` (`driverid`, `drname`, `drjoin`, `drmobile`, `drnid`, `drlicense`, `drlicensevalid`, `draddress`, `drphoto`, `dr_available`) VALUES
-(20, 'fahim', '03/04/2018', '01717172398712', '91238912093097812', '1093q098091839', '03/26/2018', ' creasent road, dhaka, bangladesh.', 'nsf.jpg', 1),
-(21, 'Arman', '03/04/2018', '0123084982', 'kls3893809839082', '1093q098091839', '03/04/2018', ' Oktroy Mor, Rajshahi.', 'rkb.jpg', 0);
+(20, 'Talha', '03/04/2018', '01717172398712', '202121212122', '1093q098091839', '03/26/2018', ' creasent road, dhaka, bangladesh.  ', '', 0),
+(21, 'Arman', '03/04/2018', '0123084982', 'kls3893809839082', '1093q098091839', '03/04/2018', ' Oktroy Mor, Rajshahi.', 'rkb.jpg', 1),
+(29, 'Fahim', '02/09/2021', '121205', '291112121212', '121212121212', '02/08/2021', 'Mirpur-1,Dhaka.', '', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `schedule`
+--
+
+CREATE TABLE `schedule` (
+  `id` int(11) NOT NULL,
+  `period` varchar(255) NOT NULL,
+  `first` varchar(55) NOT NULL,
+  `second` varchar(55) NOT NULL,
+  `third` varchar(55) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `schedule`
+--
+
+INSERT INTO `schedule` (`id`, `period`, `first`, `second`, `third`) VALUES
+(1, '1st JANUARY to 31st JANUARY	', '3-45	', '4-45	', '6-15'),
+(2, '1st FEBRUARY to 28/29th FEBRUARY	', '4-00	', '5-00	', '6-30'),
+(3, '1st APRIL to 30th APRIL	', '3-45	', '4-45	', '6-15'),
+(4, '1st MAY to 31st MAY	', '4-00	', '5-00	', '6-30'),
+(5, '1st JUNE to 31st JULY	', '3-45 ', '4-45 ', '6-15'),
+(6, '1st AUGUST to 15th AUGUST	', '4-00 ', '5-00 ', '6-30');
 
 -- --------------------------------------------------------
 
@@ -155,9 +177,6 @@ CREATE TABLE `tripcost` (
 --
 
 INSERT INTO `tripcost` (`id`, `booking_id`, `username`, `total_km`, `oil_cost`, `extra_cost`, `total_cost`, `paid`) VALUES
-(13, '47', 'fahad', '10', '33', '8', '250', 1),
-(15, '48', 'fahad', '10', '1000', '1200', '2200', 1),
-(18, '49', 'fahad', '8', '1000', '1200', '2200', 1),
 (19, '51', 'fahad', '100', '100`', '10', '10', 1),
 (20, '52', 'fahad', '10', '1000', '10', '1010', 1);
 
@@ -184,7 +203,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `email`, `username`, `password`, `admin`) VALUES
 (10, 'ibtihaj', 'ahmed', 'fahad@gmail.com', 'fahad', 'asdasd', 0),
 (13, 'dad', 'ahmed', 'fahaha@gmail.com', 'asdasd', 'asdasdad', 0),
-(14, 'Mr.', 'user', 'user@gmail.com', 'username', 'user', 0);
+(14, 'Mr.', 'user', 'user@gmail.com', 'username', 'password', 0),
+(15, 'md', 'mizanur', 'mizan@gmail.com', 'mizan96', '000', 0);
 
 -- --------------------------------------------------------
 
@@ -210,9 +230,8 @@ CREATE TABLE `vehicle` (
 --
 
 INSERT INTO `vehicle` (`veh_id`, `veh_reg`, `veh_type`, `chesisno`, `brand`, `veh_color`, `veh_regdate`, `veh_description`, `veh_photo`, `veh_available`) VALUES
-(25, 'ga-259723', 'car', '101-12303.20201', 'corolla', 'Black', '25/03.17', 'hello this is a black car.', '1.jpg', 1),
-(26, 'cho- 301294', 'car', '101-12309.23981', 'axio', 'white', '26.9.15', ' hello this is a white car. ', '2.jpg', 0),
-(35, 'go-190312', 'car', '101321-138713.3291823', 'Corolla', 'Red', '10/17/2017', ' This is a red car.', 'images.jpg', 1);
+(36, 'fdfdf', 'bus', 'fdfdf', 'fdfdf', 'fdfdf', '02/03/2021', ' fdfdfdf', 'icon-carbonated-drinks.png', 1),
+(68, '121220202', 'car', '21212121', 'TATA', 'yealo', '02/12/2021', 'dfdfdfd kdjkdf', 'a4bd6cb5b598b71126877ed334557190.jpg', 0);
 
 --
 -- Indexes for dumped tables
@@ -241,6 +260,12 @@ ALTER TABLE `booking`
 --
 ALTER TABLE `driver`
   ADD PRIMARY KEY (`driverid`);
+
+--
+-- Indexes for table `schedule`
+--
+ALTER TABLE `schedule`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tripcost`
@@ -280,13 +305,19 @@ ALTER TABLE `bill`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `driver`
 --
 ALTER TABLE `driver`
-  MODIFY `driverid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `driverid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+
+--
+-- AUTO_INCREMENT for table `schedule`
+--
+ALTER TABLE `schedule`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tripcost`
@@ -298,13 +329,13 @@ ALTER TABLE `tripcost`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `vehicle`
 --
 ALTER TABLE `vehicle`
-  MODIFY `veh_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `veh_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
