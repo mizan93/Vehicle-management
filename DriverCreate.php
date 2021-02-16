@@ -13,12 +13,12 @@
         $drlicense=$_POST['drlicense'];
         $drlicensevalid=$_POST['drlicensevalid'];
         $draddress=$_POST['draddress'];
-        //$drphoto=$_FILES['file']['name'];
-        $drphoto= $_FILES['file']['name'];
+        $drphoto=$_FILES['file']['name'];
+        // $drphoto= $_FILES['file']['name'];
         
         //image Upload
     
-       move_uploaded_file($_FILES['file']['tmp_name'],"picture/".$_FILES['file']['name']); 
+       move_uploaded_file($_FILES['file']['tmp_name'],"photos/".$_FILES['file']['name']); 
         
         $res=false;
         $insert_query="INSERT INTO `driver`(`driverid`, `drname`, `drjoin`, `drmobile`, `drnid`, `drlicense`, `drlicensevalid`, `draddress`, `drphoto`) 

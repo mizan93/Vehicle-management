@@ -60,7 +60,7 @@
 
                         <tr>
                 
-                            <td><img height="100px" width="100px" src="picture/<?php echo $row["drphoto"]; ?>" alt="dp"></td>
+                            <td><img height="100px" width="100px" src="photos/<?php echo $row["drphoto"]; ?>" alt=""></td>
 
                             <td><a href="driverprofile.php?driverid=<?php echo $row["driverid"]; ?>"> <?php echo $row["drname"] ?></a></td>
                         
@@ -68,7 +68,6 @@
                                 <a class="btn btn-primary" href="DriverView.php?driverid=<?php echo $row["driverid"]; ?>">View</a>
                                 <a class="btn btn-info" href="DriverEdit.php?driverid=<?php echo $row["driverid"]; ?>">Edit</a>
                                 <a class="btn btn-danger" onclick="return confirm('Are you sure to delete?');" href="DriverDelete.php?driverid=<?php echo $row['driverid']; ?>">Delete</a>
-                                
                             </td>
                         </tr>
                         <?php } }?>

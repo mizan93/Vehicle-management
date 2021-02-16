@@ -36,6 +36,15 @@
                 <h1 style="text-align: center;">Booking List</h1>
                  
               </div> 
+              <?php
+        if (isset($_GET['msg'])) {?>
+       <div class="alert alert-danger alert-dismissable"  style="width: 300px; margin:0 auto;">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                    <?php echo $_GET['msg'];?>
+                  </div>
+<?php
+        }
+?>
               <table id="myTable" class="table table-bordered animated bounce">
                 <thead>
                     

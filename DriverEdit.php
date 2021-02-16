@@ -1,11 +1,10 @@
 <?php
-    if(!isset($_SESSION)) 
-    { 
-        session_start(); 
-    } 
-    $connection= mysqli_connect('localhost','root','','transport_management');
-    $msg= "" ;    
-    if(isset($_POST['submit'])){
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+    $connection= mysqli_connect('localhost', 'root', '', 'transport_management');
+    $msg= "" ;
+    if (isset($_POST['submit'])) {
         $driverid=$_POST['driverid'];
         $drname=$_POST['drname'];
         $drjoin=$_POST['drjoin'];
@@ -19,7 +18,7 @@
         
         //image Upload
     
-       move_uploaded_file($_FILES['file']['tmp_name'],"picture/".$_FILES['file']['name']); 
+        move_uploaded_file($_FILES['file']['tmp_name'], "photos/".$_FILES['file']['name']);
         
         $res=false;
         $insert_query="UPDATE  `driver` SET 
@@ -28,14 +27,13 @@
         `draddress`='$draddress', `drphoto`='$drphoto'
         WHERE driverid='$driverid'";
         
-        $res= mysqli_query($connection,$insert_query);
+        $res= mysqli_query($connection, $insert_query);
             
-        if($res==true){
+        if ($res==true) {
             $msg= "Driver Updated successfully.";
          
             header('Location:DriverIndex.php?msg='.$msg);
-        }
-        else{
+        } else {
             die('unsuccessful' .mysqli_error($connection));
         }
     }

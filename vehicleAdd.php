@@ -28,9 +28,8 @@
         if ($res==true) {
             $msg='Vehicle addede.';
             header('Location:vehicleList.php?msg='.$msg);
-        }else{
-          die('unsuccessful' .mysqli_error($connection));
-
+        } else {
+            die('unsuccessful' .mysqli_error($connection));
         }
     }
 ?>
@@ -57,21 +56,17 @@
        <div class="page-header">
             <h1 style="text-align: center;">New Vehicle Form </h1>
             <a class="btn btn-primary float-right" href="vehicleList.php" role="button">Vehicle List</a>
-
       </div> 
        <div class="col-md-3">
        </div>
         <div class="col-md-6 animated bounceIn"> 
-        
                 <br>
             <form class="form-horizontal" action="" method="post" enctype="multipart/form-data"required>
-                
                 <div class="input-group">
                   <span class="input-group-addon"><b>Registration Number</b></span>
                   <input id="vehreg" type="text" class="form-control" name="vehregno" placeholder="Reg No"required>
                 </div>
                 <br> 
-                
                  <div class="input-group">
                   <span class="input-group-addon"><b>Type</b></span>
                   <label class="radio-inline">
@@ -82,19 +77,16 @@
                 </label>
                 </div>
                 <br> 
-                
                  <div class="input-group">
                   <span class="input-group-addon"><b>Chesis No</b></span>
                   <input id="vehchesis" type="text" class="form-control" name="vehchesis" placeholder="Chesis No" requiredd>
                 </div>
                 <br> 
-                
                 <div class="input-group">
                   <span class="input-group-addon"><b>Brand</b></span>
                   <input id="vehbrand" type="text" class="form-control" name="vehbrand" placeholder="Brand" required>
                 </div>
                 <br>
-                
                 <div class="input-group">
                   <span class="input-group-addon"><b>Color</b></span>
                   <input id="vehcolor" type="text" class="form-control" name="vehcolor" placeholder="Color"required>
@@ -106,15 +98,11 @@
                   <input id="vehregdate" type="text" class="form-control" name="vehregdate" placeholder="Registration date" required>
                 </div>
                 <br>
-                
-              
-                
                  <script>
                       $( function() {
                         $( "#vehregdate" ).datepicker();
                       } );
                 </script> 
-                
                 
                 <br>
                 
@@ -137,9 +125,6 @@
                   <input  type="file" class="form-control" name="file"> 
 
               </div>
-                
-                
-                 
                 
                 <div class="input-group">
                   <input type="submit" name="submit" class="btn btn-success">

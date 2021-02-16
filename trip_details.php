@@ -1,3 +1,4 @@
+
 <?php
     session_start();
      $connection= mysqli_connect('localhost', 'root', '', 'transport_management');
@@ -32,6 +33,14 @@
                     <h1 style="text-align: center;">Trip Details</h1>
                  
                 </div>
+                <?php
+        if (isset($_GET['msg'])) {?>
+       <div class="alert alert-danger alert-dismissable"  style="width: 300px; margin:0 auto;">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                    <?php echo $_GET['msg'];?>
+                  </div>
+<?php
+   } ?>
                 
                 <table id="myTable" class="table table-bordered animated rubberBand">
                     <thead>
@@ -41,6 +50,7 @@
                         <th>Oil Cost</th>
                         <th>Extra Cost</th>
                         <th>Total Cost Cost</th>
+                        <th>Action</th>
                     </thead>
                     <tbody>
                         <?php
@@ -54,6 +64,11 @@
                             <td><?php echo $row['oil_cost']; ?></td>
                             <td><?php echo $row['extra_cost']; ?></td>
                             <td><?php echo $row['total_cost']; ?></td>
+                            <td>
+                                <!-- <a class="btn btn-primary" href="DriverView.php?driverid=<?php echo $row["driverid"]; ?>">View</a>
+                                <a class="btn btn-info" href="DriverEdit.php?driverid=<?php echo $row["driverid"]; ?>">Edit</a> -->
+                                <a class="btn btn-danger" onclick="return confirm('Are you sure to delete?');" href="tripDelete.php?id=<?php echo $row['id']; ?>">Delete</a>
+                            </td>
                         </tr>
                         <?php  }
                          ?>

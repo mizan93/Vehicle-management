@@ -1,12 +1,12 @@
 <?php
-    $connection= mysqli_connect("localhost","root","","transport_management");
+    $connection= mysqli_connect("localhost", "root", "", "transport_management");
     session_start();
 
-    $driverid= $_GET['driverid']; 
+    $driverid= $_GET['driverid'];
 
-    $sql= "SELECT * FROM `driver` WHERE driverid='$driverid'"; 
+    $sql= "SELECT * FROM `driver` WHERE driverid='$driverid'";
     //echo $sql;
-    $res= mysqli_query($connection,$sql);
+    $res= mysqli_query($connection, $sql);
     $row= mysqli_fetch_assoc($res);
 
     
@@ -43,7 +43,7 @@
             <hr>
            <div class="col-sm-3">
                    <div class="fb-profile">
-                        <img height="250" width="250" align="left" class="fb-image-profile thumbnail userpic" src="picture/<?php echo $row['drphoto'] ?>" alt="dp"/>
+                        <img height="250" width="250" align="left" class="fb-image-profile thumbnail userpic" src="photos/<?php echo $row['drphoto'] ?>" alt="dp"/>
                         
                     </div>
            </div> 

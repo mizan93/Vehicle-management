@@ -8,7 +8,9 @@
     echo $sql;
    $result=mysqli_query($conn,$sql);
    if(mysqli_query($conn,$sql)){
-       header("Location: bookinglist.php");
+    $msg="Booking deleted.";
+
+       header("Location: bookinglist.php?msg=".$msg);
    }else{
          echo "Not deleted";
    }

@@ -18,17 +18,35 @@
               </button>
 
             </div>
+            <style>
+            #active {
+                background: burlywood;
+            }
+        </style>
+            <div class="collapse navbar-collapse" id="mynavbar">
+            <?php
+            $path = $_SERVER['SCRIPT_FILENAME'];
+            $currenpage = basename($path, '.php');
+
+            ?>
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav gabali">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="buslist.php">Vehicle</a></li>
-                <li><a href="driverlist.php">Driver</a></li>
-                <li><a href="route.php">Bus Route</a></li>
-                <li><a href="schedule.php">Bus Schedule</a></li>
-                
-               
-                
-
+              <li <?php
+                    if($currenpage=='index'){echo 'id="active"';}
+                    ?>><a href="index.php">Home</a></li>
+              <li <?php
+                    if($currenpage=='buslist'){echo 'id="active"';}
+                    ?>><a href="buslist.php">Vehicle</a></li>
+              <li <?php
+                    if($currenpage=='driverlist'){echo 'id="active"';}
+                    ?>><a href="driverlist.php">Driver</a></li>
+              <li <?php
+                    if($currenpage=='route'){echo 'id="active"';}
+                    ?>><a href="route.php">Bus Route</a></li>
+                    
+              <li <?php
+                    if($currenpage=='schedule'){echo 'id="active"';}
+                    ?>><a href="schedule.php">Bus Schedule</a></li>                
               </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -38,12 +56,7 @@
 
             </div>   
         </nav>
-             
-      
-       
   </div>
-   
-       
     <?php } else { ?> 
     <div class="container">
        <nav class="navbar navbar-inverse navbar-fixed-top gabanav">
@@ -56,29 +69,39 @@
               </button>
 
             </div>
+            <style>
+            #active {
+                background: burlywood;
+            }
+        </style>
+            <div class="collapse navbar-collapse" id="mynavbar">
+            <?php
+            $path = $_SERVER['SCRIPT_FILENAME'];
+            $currenpage = basename($path, '.php');
+
+            ?>
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav gabali">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="buslist.php">Vehicle</a></li>
-                <li><a href="driverlist.php">Driver</a></li>
-                <li><a href="route.php">Bus Route</a></li>
-                <li><a href="schedule.php">Bus Schedule</a></li>
-                <li><a href="mybill.php?id=<?php echo $_SESSION['username']; ?>">My Account</a></li>
+              <li <?php
+                    if($currenpage=='index'){echo 'id="active"';}
+                    ?>><a href="index.php">Home</a></li>
+              <li <?php
+                    if($currenpage=='buslist'){echo 'id="active"';}
+                    ?>><a href="buslist.php">Vehicle</a></li>
+              <li <?php
+                    if($currenpage=='driverlist'){echo 'id="active"';}
+                    ?>><a href="driverlist.php">Driver</a></li>
+              <li <?php
+                    if($currenpage=='route'){echo 'id="active"';}
+                    ?>><a href="route.php">Bus Route</a></li>
+                    
+              <li <?php
+                    if($currenpage=='schedule'){echo 'id="active"';}
+                    ?>><a href="schedule.php">Bus Schedule</a></li>   
+              <li <?php
+                    if($currenpage=='mybill'){echo 'id="active"';}
+                    ?>><a href="mybill.php?id=<?php echo $_SESSION['username']; ?>">My Account</a></li>   
                
-                
-                <!--
-                 <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="newdriver.php">Add New Driver</a></li>
-                    <li><a href="newvehicle.php">Add New Vehicle</a></li>
-                    <li><a href="indexbill.php">Billing System</a></li>
-                    <li><a href="bookinglist.php">Booking</a></li>
-                    <li><a href="trip_details.php">Trip Details</a></li>
-                  </ul>
-                </li>
-                -->
-
               </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="logout.php"><span class="glyphicon glyphicon-user"></span> Log Out</a></li>

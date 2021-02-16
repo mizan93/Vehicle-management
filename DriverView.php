@@ -41,7 +41,7 @@
             <hr>
            <div class="col-sm-3">
                    <div class="fb-profile">
-                        <img height="250" width="250" align="left" class="fb-image-profile thumbnail userpic" src="photos/<?php echo $row['veh_photo'] ?>" alt="dp"/>
+                        <img height="250" width="250" align="left" class="fb-image-profile thumbnail userpic" src="photos/<?php echo $row['drphoto'] ?>" alt="dp"/>
                         
                     </div>
            </div> 
