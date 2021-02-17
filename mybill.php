@@ -39,7 +39,7 @@
 </head>
 <body>
     <?php include 'navbar.php'; ?>
-    
+    <br>
     <div class="container">
         <div class="row">
             <div class="page-header">

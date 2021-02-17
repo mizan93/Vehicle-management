@@ -2,7 +2,7 @@
 
     $connection=mysqli_connect("localhost","root","","transport_management");
 
-    // session_start();
+    session_start();
     
     $msg="";
     $id=$_GET['id'];
